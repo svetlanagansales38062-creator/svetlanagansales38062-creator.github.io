@@ -3,70 +3,169 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lana $ale$ — Свобода</title>
+  <title>Lana $ale$ — Слова Души</title>
+  <!-- Красивые шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+      font-family: 'Cormorant Garamond', serif;
+      background: linear-gradient(135deg, #f5eeff, #e6d9ff);
       color: #4b2e83;
       margin: 0;
       padding: 0;
-      line-height: 1.7;
+      line-height: 1.8;
+      font-size: 1.2em;
     }
+
+    /* Бегущая строка */
     .marquee-container {
       background: #6a0dad;
       color: white;
-      padding: 8px 0;
+      padding: 10px 0;
       overflow: hidden;
       white-space: nowrap;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.25);
       font-weight: bold;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15em;
     }
     .marquee-text {
       display: inline-block;
       padding-left: 100%;
-      animation: marquee 22s linear infinite;
+      animation: marquee 24s linear infinite;
     }
     @keyframes marquee {
       0% { transform: translateX(0); }
       100% { transform: translateX(-100%); }
     }
+
     header {
       text-align: center;
-      padding: 40px 20px;
-      background: rgba(106, 13, 173, 0.08);
-      border-bottom: 2px solid #c4a7e7;
+      padding: 50px 20px 30px;
+      background: rgba(106, 13, 173, 0.06);
+      border-bottom: 2px solid #d1b8f0;
     }
     h1 {
-      font-size: 2.5em;
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
       margin: 0;
       color: #6a0dad;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
+    .subtitle {
+      font-style: italic;
+      color: #8a5ebd;
+      margin-top: 12px;
+      font-size: 1.2em;
+    }
+
+    /* Стихи */
     .poem {
       max-width: 800px;
-      margin: 30px auto;
-      padding: 25px;
-      background: #f8f2ff;
-      border-radius: 12px;
-      border-left: 5px solid #9a6bd9;
-      box-shadow: 0 3px 8px rgba(106, 13, 173, 0.12);
+      margin: 45px auto;
+      padding: 35px;
+      background: rgba(255, 250, 255, 0.7);
+      border-radius: 16px;
+      border-left: 6px solid #9a6bd9;
+      box-shadow: 0 6px 20px rgba(106, 13, 173, 0.18);
+      position: relative;
+      backdrop-filter: blur(4px);
+    }
+    .poem-date {
+      color: #8a5ebd;
+      font-style: italic;
+      font-size: 1em;
+      margin-bottom: 10px;
+      text-align: right;
+      font-family: 'Playfair Display', serif;
     }
     .poem-title {
-      font-weight: bold;
-      font-size: 1.5em;
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
       color: #6a0dad;
-      margin-bottom: 15px;
+      margin: 15px 0 25px;
+      text-align: center;
+      font-weight: 600;
     }
     .poem-text {
       white-space: pre-line;
-      font-size: 1.15em;
+      font-size: 1.3em;
+      line-height: 1.75;
+      text-align: justify;
+      hyphens: auto;
+      color: #3a2566;
     }
+
+    /* Галерея */
+    .gallery {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      color: #6a0dad;
+      font-size: 1.8em;
+      margin: 20px 0 30px;
+    }
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 14px;
+      margin: 20px 0;
+      box-shadow: 0 8px 24px rgba(106, 13, 173, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border: 1px solid #e0d0ff;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(106, 13, 173, 0.4);
+    }
+
+    /* Музыка */
+    .music-section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .track {
+      margin: 30px 0;
+      padding: 20px;
+      background: rgba(248, 242, 255, 0.6);
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(106, 13, 173, 0.15);
+    }
+    .track-title {
+      font-family: 'Playfair Display', serif;
+      color: #6a0dad;
+      font-size: 1.4em;
+      margin-bottom: 12px;
+    }
+    audio {
+      width: 100%;
+      max-width: 520px;
+      margin-top: 8px;
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 30px;
       color: #6a0dad;
       border-top: 1px dashed #d1b8f0;
-      margin-top: 30px;
+      margin-top: 40px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1em;
+    }
+
+    /* Адаптация для телефона */
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2em; }
+      .poem-title { font-size: 1.6em; }
+      .poem-text { font-size: 1.15em; }
+      .marquee-container { padding: 8px 0; font-size: 1em; }
     }
   </style>
 </head>
@@ -74,13 +173,15 @@
 
   <!-- Бегущая строка -->
   <div class="marquee-container">
-    <div class="marquee-text">Автор слов: Гансалес Светлана (Lana $ale$)</div>
+    <div class="marquee-text">Автор : Гансалес Светлана (Lana $ale$)</div>
   </div>
 
   <header>
-    <h1>Свобода</h1>
+    <h1>Слова Души</h1>
+    <div class="subtitle">Стихи • Образы • Звуки</div>
   </header>
 
+  <!-- Стих 1: Свобода -->
   <div class="poem">
     <div class="poem-title">Свобода</div>
     <div class="poem-text">
@@ -95,8 +196,71 @@
     </div>
   </div>
 
+  <!-- Стих 2: Новое стихотворение -->
+  <div class="poem">
+    <div class="poem-date">02.07.2025</div>
+    <div class="poem-title">Когда-то боль утихнет</div>
+    <div class="poem-text">
+Когда то боль утихнет, 
+Я снова буду улыбаться, 
+Огонь души вновь вспыхнет, 
+От много придётся отказаться.
+Я в памяти храню прекрасные моменты, 
+Плохое в жизни стараюсь я забыть,
+На жизнь свою, я ставлю новые акценты, 
+И всё смогу я пережить. 
+Порой хотелось мне бежать, 
+Неведома куда , туда куда глядят глаза, 
+От отчаяния хотелось мне кричать, 
+Но жму сейчас я на тормоза. 
+Внутри мир рухнул , понимаю,
+Но это не конец, прекрасное начало, 
+Все будет так , как нужно , знаю, 
+Моя душа свет отражала. 
+Казалось , что я  будто в тупике, 
+Идти порой бывало трудно, 
+Но свет горит  во мгле, 
+Но правда очень скудно.  
+И я пойму, что жизнь прекрасна, 
+Иду я дальше, но оглянусь,  
+И как бы ты нас не ломала , 
+К прошлому я больше не вернусь.
+    </div>
+  </div>
+
+  <!-- Галерея изображений -->
+  <div class="gallery">
+    <div class="section-title">Мои образы</div>
+    <!-- Замените имена файлов на ваши -->
+    <img src="images/my_art.jpg" alt="Свои законы">
+    <img src="images/freedom_art.png" alt="Свобода">
+    <!-- Добавьте больше строк по желанию -->
+  </div>
+
+  <!-- Музыка -->
+  <div class="music-section">
+    <div class="section-title">Моя музыка</div>
+    
+    <div class="track">
+      <div class="track-title">Свои законы</div>
+      <audio controls>
+        <source src="audio/lullaby_for_freedom_song.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+      </audio>
+    </div>
+
+    <div class="track">
+      <div class="track-title">Свет в темноте</div>
+      <audio controls>
+        <source src="audio/light_in_darkness.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+      </audio>
+    </div>
+  </div>
+
   <footer>
-    &copy; <span id="year"></span> Lana $ale$ — Все права защищены.
+    &copy; <span id="year"></span> Lana $ale$ — Все права защищены.<br>
+    Слова рождаются в тишине, но звучат для мира.
   </footer>
 
   <script>
